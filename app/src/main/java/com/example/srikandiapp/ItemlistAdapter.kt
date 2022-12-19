@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.srikandiapp.room.Item
 import kotlinx.android.synthetic.main.itemlist.view.*
 
@@ -29,6 +30,9 @@ class ItemlistAdapter (var items: ArrayList<Item>, var listener: OnAdapterListen
         val item = items[position]
         holder.view.item_title.text = item.nama
         holder.view.item_price.text = item.harga
+        Glide.with(holder.view)
+            .load(item.urlgambar)
+            .into(holder.view.item_image)
         holder.view.card_view.setOnClickListener {
             listener.onClick(item)
         }
