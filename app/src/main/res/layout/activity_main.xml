@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
         android:id="@+id/ly_atas"
         android:layout_width="match_parent"
@@ -43,6 +45,17 @@
             android:textSize="16sp" />
     </LinearLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="#008BC7"
+        tools:ignore="SpeakableTextPresentCheck"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_item"
@@ -52,4 +65,5 @@
         android:layout_below="@+id/ly_atas"
         android:background="@drawable/bg_recycler"
         tools:listitem="@layout/itemlist" />
+
 </RelativeLayout>
