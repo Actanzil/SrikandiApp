@@ -1,294 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddData">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:orientation="vertical"
-        android:background="@drawable/bg_detail"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:orientation="vertical"
-            android:padding="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_t_nama"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Nama Kendaraan"
-                android:textColor="#000000" />
+                android:layout_marginBottom="10dp"
+                android:hint="Nama Kendaraan"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: Toyota Innova Zenix"
+                app:startIconTint="#008BC7">
 
-            <EditText
-                android:id="@+id/e_nama"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: Toyota Innova Zenix"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_t_harga"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Harga"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/e_harga"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: IDR 80.000.000"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
-
-            <TextView
-                android:id="@+id/tv_t_trakit"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_harga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Tahun Rakit"
-                android:textColor="#000000" />
+                android:layout_marginBottom="10dp"
+                android:hint="Harga Kendaraan"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: IDR 80.000.000"
+                app:startIconTint="#008BC7">
 
-            <EditText
-                android:id="@+id/e_trakit"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: 2022"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_t_kilometer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Kilometer"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/e_kilometer"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: 10000"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
-
-            <TextView
-                android:id="@+id/tv_t_transmisi"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_trakit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Transmisi"
-                android:textColor="#000000" />
+                android:layout_marginBottom="10dp"
+                android:hint="Tahun Rakit"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: 2022"
+                app:startIconTint="#008BC7">
 
-            <EditText
-                android:id="@+id/e_transmisi"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: Manual"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_trakit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_t_silinder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Kapasitas Mesin"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/e_silinder"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: 1459"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
-
-            <TextView
-                android:id="@+id/tv_t_bbm"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_kilometer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Jenis BBM"
-                android:textColor="#000000" />
+                android:layout_marginBottom="10dp"
+                android:hint="Kilometer"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: 12000"
+                app:startIconTint="#008BC7">
 
-            <EditText
-                android:id="@+id/e_bbm"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: Bensin"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_kilometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_warna"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Warna Kendaraan"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/e_warna"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: Cream"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
-
-            <TextView
-                android:id="@+id/tv_t_kota"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_transmisi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Kota Registrasi"
-                android:textColor="#000000" />
+                android:layout_marginBottom="10dp"
+                android:hint="Transmisi"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: Manual/Automatic"
+                app:startIconTint="#008BC7">
 
-            <EditText
-                android:id="@+id/e_kota"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: Malang"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_transmisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_t_berlaku"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Berlaku Hingga"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/e_berlaku"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="cth: 05/2023"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
-
-            <TextView
-                android:id="@+id/tv_t_gambar"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_silinder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaymedium"
-                android:text="Berlaku Hingga"
-                android:textColor="#000000" />
+                android:layout_marginBottom="10dp"
+                android:hint="Kapasitas Mesin"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: 1459"
+                app:startIconTint="#008BC7">
 
-            <EditText
-                android:id="@+id/e_urlgambar"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_silinder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_bbm"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6sp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_form_edit"
-                android:ems="10"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:hint="url gambar"
-                android:inputType="textPersonName"
-                android:padding="8dp"
-                android:textColor="#8E8E8E"
-                android:textColorHint="#8E8E8E" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Jenis BBM"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: Bensin"
+                app:startIconTint="#008BC7">
 
-            <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_bbm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_warna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Warna Kendaraan"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: Putih"
+                app:startIconTint="#008BC7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_warna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Kota Registrasi"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: Jakarta"
+                app:startIconTint="#008BC7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_kota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_berlaku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Berlaku Hingga"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: 02/2023"
+                app:startIconTint="#008BC7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_berlaku"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t_urlgambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Gambar Kendaraan"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#008BC7"
+                app:endIconMode="clear_text"
+                app:endIconTint="#008BC7"
+                app:hintTextColor="#008BC7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="cth: salinurl"
+                app:startIconTint="#008BC7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e_urlgambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
                 android:id="@+id/btn_tambah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -296,12 +310,10 @@
                 android:background="@drawable/bg_btn_tambah"
                 android:fontFamily="@font/sfprodisplaymedium"
                 android:text="Tambahkan Data"
-                android:textColor="#ffffff" />
-
+                android:textColor="#ffffff"/>
 
         </LinearLayout>
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
