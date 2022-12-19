@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [Item::class],
-    version = 1
+    version = 2
 )
 abstract class ItemDB : RoomDatabase(){
 
@@ -28,7 +28,9 @@ abstract class ItemDB : RoomDatabase(){
             context.applicationContext,
             ItemDB::class.java,
             "dbsrikandi.db"
-        ).build()
+        )
+            .fallbackToDestructiveMigration()
+            .build()
 
     }
 }
