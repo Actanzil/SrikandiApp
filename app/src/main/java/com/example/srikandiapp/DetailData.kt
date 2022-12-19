@@ -21,8 +21,9 @@ class DetailData : AppCompatActivity() {
     }
 
     fun setupView(){
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        title = "Detail Data"
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true).apply {
+            title = "Detail Data"
+        }
         val intentType = intent.getIntExtra("intent_type", 0)
         when (intentType){
             Constant.TYPE_READ -> {
