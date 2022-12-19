@@ -2,6 +2,7 @@ package com.example.srikandiapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.srikandiapp.room.Constant
 import com.example.srikandiapp.room.Item
 import com.example.srikandiapp.room.ItemDB
 import kotlinx.android.synthetic.main.activity_add_data.*
@@ -21,7 +22,15 @@ class AddData : AppCompatActivity() {
     }
 
     fun setupView() {
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true).apply {
+            title = "Tambah Data"
+        }
+        val intentType = intent.getIntExtra("intent_type", 0)
+        when (intentType){
+            Constant.TYPE_CREATE -> {
+                AddData()
+            }
+        }
     }
 
     fun setupListener() {
@@ -45,5 +54,10 @@ class AddData : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }
