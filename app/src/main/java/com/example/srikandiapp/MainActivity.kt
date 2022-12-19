@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupView()
+        setupListener()
         setupRecyclerView()
     }
 
@@ -40,6 +41,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupView (){
         supportActionBar?.hide()
+    }
+
+    private fun setupListener() {
+        bt_add.setOnClickListener {
+            startActivity(Intent(this, AddData::class.java))
+        }
     }
 
     fun intentDetail(itemId: Int, intentType: Int){
