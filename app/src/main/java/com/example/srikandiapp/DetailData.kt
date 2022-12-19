@@ -18,8 +18,6 @@ class DetailData : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_data)
         setupView()
-
-        Toast.makeText(this, itemId.toString(), Toast.LENGTH_SHORT).show()
     }
 
     fun setupView(){
