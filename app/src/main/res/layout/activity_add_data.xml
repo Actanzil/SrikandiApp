@@ -6,4 +6,303 @@
     android:layout_height="match_parent"
     tools:context=".AddData">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/splashscreen"
+        android:contentDescription="TODO" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            android:padding="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_t_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Nama Kendaraan"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_nama"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: Toyota Innova Zenix"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Harga"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_harga"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: IDR 80.000.000"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_trakit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Tahun Rakit"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_trakit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: 2022"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_kilometer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Kilometer"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_kilometer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: 10000"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_transmisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Transmisi"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_transmisi"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: Manual"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_silinder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Kapasitas Mesin"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_silinder"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: 1459"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_bbm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Jenis BBM"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_bbm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: Bensin"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_warna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Warna Kendaraan"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_warna"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: Cream"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Kota Registrasi"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_kota"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: Malang"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_berlaku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Berlaku Hingga"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_berlaku"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="cth: 05/2023"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <TextView
+                android:id="@+id/tv_t_gambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Berlaku Hingga"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/e_urlgambar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_form_edit"
+                android:ems="10"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="url gambar"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="#8E8E8E"
+                android:textColorHint="#8E8E8E" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_tambah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_tambah"
+                android:fontFamily="@font/sfprodisplaymedium"
+                android:text="Tambahkan Data"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
