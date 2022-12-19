@@ -16,5 +16,6 @@ data class Item (
     val bbm: String,
     val warna: String,
     val kota: String,
-    val berlaku: String
+    val berlaku: String,
+    val urlgambar: String
 )
