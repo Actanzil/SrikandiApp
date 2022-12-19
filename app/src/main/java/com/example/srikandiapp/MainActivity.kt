@@ -49,6 +49,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun intentAdd(itemId: Int, intentType: Int){
+        startActivity(
+            Intent(applicationContext, AddData::class.java)
+                .putExtra("intent_id", itemId)
+                .putExtra("intent_type", intentType)
+        )
+    }
+
     fun intentDetail(itemId: Int, intentType: Int){
         startActivity(
             Intent(applicationContext, DetailData::class.java)
