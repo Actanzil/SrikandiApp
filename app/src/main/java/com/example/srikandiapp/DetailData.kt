@@ -1,11 +1,18 @@
 package com.example.srikandiapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.Resource
+import com.bumptech.glide.request.target.BitmapImageViewTarget
 import com.example.srikandiapp.room.Constant
 import com.example.srikandiapp.room.ItemDB
 import kotlinx.android.synthetic.main.activity_detail_data.*
+import kotlinx.android.synthetic.main.activity_detail_data.view.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.itemlist.view.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -46,6 +53,12 @@ class DetailData : AppCompatActivity() {
             tv_i_warna.setText( items.warna )
             tv_i_kota.setText( items.kota )
             tv_i_berlaku.setText( items.berlaku )
+            Log.d("urlgambar", items.urlgambar)
+            Glide.with(i_gambar.rootView)
+                .asBitmap()
+                .load(items.urlgambar)
+                .into(BitmapImageViewTarget(i_gambar))
+
         }
     }
 

@@ -1,6 +1,7 @@
 package com.example.srikandiapp
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,7 @@ class ItemlistAdapter (var items: ArrayList<Item>, var listener: OnAdapterListen
         val item = items[position]
         holder.view.item_title.text = item.nama
         holder.view.item_price.text = item.harga
+        Log.d("urlgambar", item.urlgambar)
         Glide.with(holder.view)
             .load(item.urlgambar)
             .into(holder.view.item_image)
